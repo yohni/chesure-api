@@ -3,8 +3,5 @@ json.array! @products do |product|
   json.name product.name
   json.description product.description
   json.price product.price
-  json.product_type do
-    json.id product.product_type.id
-    json.name product.product_type.name
-  end
+  json.product_type product.product_type
 end

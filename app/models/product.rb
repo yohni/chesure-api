@@ -1,5 +1,5 @@
 class Product < ApplicationRecord
-  belongs_to :product_type
+  has_one :product_type
 
   validates :name, presence: true
   validates :description, presence: true
