@@ -10,11 +10,9 @@ Product.destroy_all
 ProductType.destroy_all
 5.times do
   productType = ProductType.create({name: Faker::Name.name})
-  Product.create({
+  productType.product.create({
     name: Faker::Name.name,
     description: Faker::Lorem.word,
     price: Faker::Number.decimal(l_digits: 2),
-    product_type_id: productType.id,
-    product_type: productType
   })
 end
